@@ -8,7 +8,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script defer src="script.js"></script>
+    <script src="scripts/global.js"></script>
+    <script defer src="scripts/menu.js"></script>
+    <script defer src="scripts/main.js"></script>
     <script
       src="https://kit.fontawesome.com/eaa92e9904.js"
       crossorigin="anonymous"
@@ -20,81 +22,7 @@
 
   <body>
     <div class="preloader"><span id="page-name">About</span></div>
-    <header>
-      <a class="skip-content" href="#main-container" tabindex="-1"
-        >Skip to main content</a
-      >
-      <div class="nav-menu-button-warpper">
-        <button class="nav-menu-button">
-          <div class="nav-menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="nav-menu-fill"></div>
-        </button>
-      </div>
-    </header>
-    <div class="overlay-nav-menu">
-      <div class="nav-menu-warpper">
-        <div class="menu-section">Navigation</div>
-        <ul class="nav-links">
-          <li>
-            <a class="nav-link" href="index.html">
-              <span>Works</span>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="albums.html">
-              <span>Albums</span>
-            </a>
-          </li>
-          <li>
-            <a class="nav-link" href="about.html">
-              <span>About</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <nav>
-      <div class="nav-bar">
-        <div class="menu">
-          <ul class="nav-links">
-            <li>
-              <a class="nav-link" href="index.html">
-                <span>Works</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="albums.html">
-                <span>Albums</span>
-              </a>
-            </li>
-            <li>
-              <a class="nav-link" href="about.html">
-                <span>About</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="content">
-      <div class="title">
-        <h1>ナブナ</h1>
-      </div>
-      <div class="quote">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nesciunt
-        pariatur commodi mollitia ducimus eum voluptatum adipisci veniam est
-        modi temporibus odio aut deleniti dolorem, nobis dignissimos quis
-        incidunt sapiente! Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Officia culpa aspernatur ullam suscipit cumque delectus
-        reprehenderit quasi ratione nulla! Rem id sequi nemo ipsa quos illo
-        tenetur laboriosam omnis magni?
-      </div>
-    </div>
+    <menu-component></menu-component>
     <main id="main-container">
       <div class="biography-container">
         <div class="avatar-container">
@@ -109,7 +37,7 @@
             <img id="avatar-img" src="images/nabuna.jpg" />
           </a>
         </div>
-        <div class="description-container">
+        <div class="description-container hide-cursor">
           <p id="general-info">
             N-buna (nabuna, ナブナ, stylized as n-buna) is a Japanese music
             producer and composer. He is a Vocaloid music producer and is the
