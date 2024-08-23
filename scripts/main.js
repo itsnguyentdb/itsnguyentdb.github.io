@@ -84,6 +84,7 @@ const handleOnDragMove = e => {
     const percentage = (mouseDelta / maxDelta) * -100;
     nextPercentageUnconstrained = parseFloat(track.dataset.previousPercentage) + percentage;
     nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+    // console.log(`Drag: ${nextPercentage}`);
     track.dataset.percentage = nextPercentage;
     isPlayingTrackAnimation = true;
 }
@@ -100,7 +101,9 @@ const handleOnWheel = e => {
     const percentage = (previousScroll / maxDelta) * 100;
 
     nextPercentage = Math.max(Math.min(percentage, 0), -100);
+    // console.log(`Scroll: ${nextPercentage}`);
     track.dataset.percentage = nextPercentage;
+    track.dataset.previousPercentage = nextPercentage;
     isPlayingTrackAnimation = true;
 
     //Update the previous scroll value by reversed nextPercentage
