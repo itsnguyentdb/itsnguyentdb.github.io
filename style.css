@@ -34,6 +34,7 @@
   color: white;
   font-size: xxx-large;
   z-index: 10001;
+  user-select: none;
 }
 .preloader #page-name::before {
   content: "";
@@ -45,6 +46,7 @@
   border-radius: 50%;
   background-color: white;
   opacity: 1;
+  user-select: none;
 }
 
 html {
